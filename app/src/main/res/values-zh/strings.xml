@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Puji Tesis</string>
+
+    <string name="login">登錄</string>
+    <string name="userid">ID.用戶</string>
+    <string name="password">密碼</string>
+    <string name="code">編號</string>
+    <string name="warehouse">庫</string>
+    <string name="user_input">輸入用戶</string>
+    <string name="date">日期</string>
+    <string name="detail">詳細內容</string>
+    <string name="delete">刪除</string>
+    <string name="name">名字</string>
+    <string name="spec">規格</string>
+    <string name="brand">品牌</string>
+    <string name="no_sap">SAP編號</string>
+    <string name="edit">編制</string>
+    <string name="adjust_stock">庫存設置</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="oke">Oke</string>
+    <string name="note">備註</string>
+    <string name="department">單位</string>
+    <string name="position">崗位</string>
+    <string name="section">課</string>
+    <string name="logout">退出</string>
+    <string name="no">No</string>
+    <string name="applicant">委托人</string>
+    <string name="date_of_filling">申請日期</string>
+    <string name="date_of_requred">需要日期</string>
+    <string name="purcheser">采購人員</string>
+    <string name="history">歷史</string>    <string name="request">申请</string>
+    <string name="purpose">用途</string>
+    <string name="stock">庫存</string>
+    <string name="master">主數據</string>
+    <string name="adj">調整</string>
+    <string name="report_takingout">出貨報告</string>
+    <string name="under_min_stock">低於庫存限制</string>
+    <string name="qty_out">出貨數量</string>
+    <string name="qty_income">進貨數量</string>
+    <string name="qty_adj">調整數量</string>
+    <string name="ending_stock">最終庫存 </string>
+    <string name="kode">編號</string>
+    <string name="billing">賬單</string>
+    <string name="qty_bill">數量單</string>
+    <string name="left">剩余</string>
+    <string name="uom">Uom</string>
+    <string name="location">位置</string>
+    <string name="piece">Uom</string>
+    <string name="item"> 項目</string>
+    <string name="qty">數量</string>
+    <string name="minimun_stock">最低庫存</string>
+    <string name="total">總共</string>
+    <string name="from">從</string>
+    <string name="until">到</string>
+    <string name="show">顯示</string>
+    <string name="receiver">接收人</string>
+    <string name="machine">機械</string>
+    <string name="take">采取</string>
+    <string name="language">語言</string>
+    <string name="language_has_been_changed">語言已更換</string>
+    <string name="basket">籃子</string>
+    <string name="stock_card">庫存紀錄</string>
+    <string name="building">建築物</string>
+
+    <string name="master_warehouse">倉庫數據</string>
+    <string name="master_item">項目數據</string>
+    <string name="master_uom">Uom 數據</string>
+    <string name="master_stock">庫存數據</string>
+    <string name="dashboard">主頁</string>
+    <string name="takingout">出貨</string>
+    <string name="incoming">進貨</string>
+    <string name="account">賬號</string>
+
+
+
+        </resources>

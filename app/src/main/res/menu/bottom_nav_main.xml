@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_24dp"
+        android:title="@string/dashboard" />
+
+    <item
+            android:id="@+id/navigation_takingout"
+            android:icon="@drawable/ic_takingout_24dp"
+            android:title="@string/takingout" />
+
+    <item
+        android:id="@+id/navigation_bill"
+        android:icon="@drawable/ic_billing_24dp"
+        android:title="@string/billing" />
+
+
+    <item
+        android:id="@+id/navigation_incoming"
+        android:icon="@drawable/ic_incoming_24dp"
+        android:title="@string/incoming" />
+
+    <item
+        android:id="@+id/navigation_akun"
+        android:icon="@drawable/ic_account_box_24dp"
+        android:title="@string/account" />
+</menu>

@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Puji Tesis</string>
+
+    <string name="login">Login</string>
+    <string name="userid">Id User</string>
+    <string name="password">Kata Sandi</string>
+    <string name="code">Kode</string>
+    <string name="warehouse">Gudang</string>
+    <string name="user_input">User Input</string>
+    <string name="date">Tanggal</string>
+    <string name="detail">Rincian</string>
+    <string name="delete">Hapus</string>
+    <string name="name">Nama</string>
+    <string name="spec">Spek</string>
+    <string name="brand">Merk</string>
+    <string name="no_sap">No.SAP</string>
+    <string name="edit">Edit</string>
+    <string name="adjust_stock">Atur Stock</string>
+    <string name="cancel">Batal</string>
+    <string name="save">Simpan</string>
+    <string name="oke">Oke</string>
+    <string name="note">Catatan</string>
+    <string name="department">Department</string>
+    <string name="position">Posisi</string>
+    <string name="section">Section</string>
+    <string name="logout">Logout</string>
+    <string name="no">No</string>
+    <string name="applicant">Pemohon</string>
+    <string name="date_of_filling">Tanggal Pengajuan</string>
+    <string name="date_of_requred">Tangal Diperlukan</string>
+    <string name="purcheser">Purcheser</string>
+    <string name="history">Riwayat</string>
+    <string name="purpose">Tujuan</string>
+    <string name="request">Ajukan</string>
+    <string name="stock">Stock</string>
+    <string name="master">Master</string>
+    <string name="adj">Adj</string>
+    <string name="report_takingout">Laporan Takingout</string>
+    <string name="under_min_stock">Dibawah Batas Stock</string>
+    <string name="qty_out">Qty Out</string>
+    <string name="qty_income">Qty Income</string>
+    <string name="qty_adj">Qty Adj</string>
+    <string name="ending_stock">Stock Akhir</string>
+    <string name="kode">Kode</string>
+    <string name="billing">Billing</string>
+    <string name="qty_bill">Qty Bill</string>
+    <string name="left">Sisa</string>
+    <string name="uom">Uom</string>
+    <string name="location">Lokasi</string>
+    <string name="piece">Uom</string>
+    <string name="item">Barang</string>
+    <string name="qty">Qty</string>
+    <string name="minimun_stock">Minimal Stock</string>
+    <string name="total">Jumlah</string>
+    <string name="from">Dari</string>
+    <string name="until">Sampai</string>
+    <string name="show">Tampilkan</string>
+    <string name="receiver">Penerima</string>
+    <string name="machine">Mesin</string>
+    <string name="take">Ambil</string>
+    <string name="language">Bahasa</string>
+    <string name="language_has_been_changed">Bahasa Berhasil Diganti</string>
+    <string name="basket">Keranjang</string>
+    <string name="stock_card">Stock Record</string>
+    <string name="building">Gedung</string>
+
+
+
+    <string name="master_warehouse">Master Gudang</string>
+    <string name="master_item">Master Barang</string>
+    <string name="master_uom">Master Uom</string>
+    <string name="master_stock">Master Stock</string>
+    <string name="dashboard">Beranda</string>
+    <string name="takingout">Takingout</string>
+    <string name="incoming">Incoming</string>
+    <string name="account">Akun</string>
+
+</resources>

@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.project.framework.mvp"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 9
+        versionName "9.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled false
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+configurations.all {
+    // this is a workaround for the issue:
+    // https://stackoverflow.com/questions/52521302/how-to-solve-program-type-already-present-com-google-common-util-concurrent-lis
+    exclude group: 'com.google.guava', module: 'listenablefuture'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'ru.mobileup:rxpagingloading:1.0.0'
+
+    //Sqlite Importer
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+
+    //Searcable spinner
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+
+
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+
+    //Json Parser
+    implementation 'com.google.code.gson:gson:2.8.0'
+
+    //image circle
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    //Toast
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+
+    //Logger
+    implementation 'com.jakewharton.timber:timber:4.5.1'
+
+
+    //Updater
+    implementation 'com.github.Piashsarker:AndroidAppUpdateLibrary:1.0.3'
+
+
+    //Dagger2 Dependncy Injection
+    implementation 'com.google.dagger:dagger-android-support:2.23.2'
+    kapt 'com.google.dagger:dagger-compiler:2.23.2'
+    kapt 'com.google.dagger:dagger-android-processor:2.23.2'
+
+    //Expaned Layout
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+
+    //Database Room
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+
+
+    //Reactive Programming
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+    // RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //Networking
+    implementation 'com.amitshekhar.android:rx2-android-networking:1.0.2'
+
+    //Image Loading'
+    implementation group: 'com.github.bumptech.glide', name: 'glide', version: '4.9.0'
+
+
+    //testing
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+}

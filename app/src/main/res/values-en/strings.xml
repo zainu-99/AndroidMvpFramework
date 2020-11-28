@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Puji Tesis</string>
+
+    <string name="login">Login</string>
+    <string name="userid">User Id</string>
+    <string name="password">Password</string>
+    <string name="code">Code</string>
+    <string name="warehouse">Warehouse</string>
+    <string name="user_input">User Input</string>
+    <string name="date">Date</string>
+    <string name="detail">Detail</string>
+    <string name="delete">Delete</string>
+    <string name="name">Name</string>
+    <string name="spec">Spec</string>
+    <string name="brand">Brand</string>
+    <string name="no_sap">No.SAP</string>
+    <string name="edit">Edit</string>
+    <string name="adjust_stock">Adjust Stock</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="oke">Oke</string>
+    <string name="note">Note</string>
+    <string name="department">Department</string>
+    <string name="position">Position</string>
+    <string name="section">Section</string>
+    <string name="logout">Logout</string>
+    <string name="no">No</string>
+    <string name="applicant">Applicant</string>
+    <string name="date_of_filling">Date Of Filling</string>
+    <string name="date_of_requred">Date Of Requred</string>
+    <string name="purcheser">Purcheser</string>
+    <string name="history">History</string>
+    <string name="purpose">Tujuan</string>
+    <string name="request">Request</string>
+    <string name="stock">Stock</string>
+    <string name="master">Master</string>
+    <string name="adj">Adj</string>
+    <string name="report_takingout">Report Takingout</string>
+    <string name="under_min_stock">Under Min Stock</string>
+    <string name="qty_out">Qty Out</string>
+    <string name="qty_income">Qty Income</string>
+    <string name="qty_adj">Qty Adj</string>
+    <string name="ending_stock">Ending Stock</string>
+    <string name="kode">Code</string>
+    <string name="billing">Billing</string>
+    <string name="qty_bill">Qty Bill</string>
+    <string name="left">Left</string>
+    <string name="uom">Uom</string>
+    <string name="location">Location</string>
+    <string name="piece">Piece</string>
+    <string name="item">Item</string>
+    <string name="qty">Qty</string>
+    <string name="minimun_stock">Minimun Stock</string>
+    <string name="total">Total</string>
+    <string name="from">From</string>
+    <string name="until">Until</string>
+    <string name="show">Show</string>
+    <string name="receiver">Receiver</string>
+    <string name="machine">Machine</string>
+    <string name="take">Take</string>
+    <string name="language">Language</string>
+    <string name="language_has_been_changed">Language Has Been Changed</string>
+    <string name="basket">Basket</string>
+    <string name="stock_card">Stock Record</string>
+    <string name="building">Building</string>
+
+
+
+    <string name="master_warehouse">Master Warehouse</string>
+    <string name="master_item">Master Item</string>
+    <string name="master_uom">Master Uom</string>
+    <string name="master_stock">Master Stock</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="takingout">Takingout</string>
+    <string name="incoming">Incoming</string>
+    <string name="account">Account</string>
+
+</resources>
