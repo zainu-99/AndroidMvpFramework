@@ -41,11 +41,17 @@ dependencies {
 
     implementation 'ru.mobileup:rxpagingloading:1.0.0'
 
+    //Edittext pin
+    implementation 'com.poovam:pin-edittext-field:1.2.3'
+
+    //image zoom
+    implementation 'com.jsibbold:zoomage:1.3.1'
+
     //Sqlite Importer
     implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 
     //Searcable spinner
-    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    //implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
 
 
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
@@ -64,12 +70,9 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.5.1'
 
 
-    //Updater
-    implementation 'com.github.Piashsarker:AndroidAppUpdateLibrary:1.0.3'
-
-
     //Dagger2 Dependncy Injection
     implementation 'com.google.dagger:dagger-android-support:2.23.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt 'com.google.dagger:dagger-compiler:2.23.2'
     kapt 'com.google.dagger:dagger-android-processor:2.23.2'
 

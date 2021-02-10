@@ -18,6 +18,7 @@ import com.project.framework.mvp.utils.UtilToast
 import com.project.framework.mvp.utils.constant.StringConstant
 import com.project.framework.mvp.utils.sessions.SessionManager
 import org.json.JSONArray
+import java.text.DecimalFormat
 
 abstract /*
 
@@ -27,8 +28,8 @@ Jay Application
 class BaseDialog : androidx.fragment.app.DialogFragment(), IBaseView {
 
     lateinit var sessionManager: SessionManager
+    val numberFormatter = DecimalFormat("#,###")
     private var mProgressDialog: Dialog? = null
-    var jsonAkses: JSONArray?= null
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val root = RelativeLayout(activity)
         root.layoutParams = ViewGroup.LayoutParams(
@@ -56,8 +57,6 @@ class BaseDialog : androidx.fragment.app.DialogFragment(), IBaseView {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         sessionManager = SessionManager(context!!)
-        val jsonString = sessionManager.GetString(StringConstant.LOGIN_SESSION_ACCESS)
-        jsonAkses = JSONArray(jsonString)
         initCreateView()
     }
 

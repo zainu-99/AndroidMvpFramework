@@ -11,9 +11,9 @@ import com.google.gson.Gson
 import com.project.framework.mvp.di.componen.IViewComponent
 import com.project.framework.mvp.utils.UtilLoading
 import com.project.framework.mvp.utils.UtilToast
-import com.project.framework.mvp.utils.constant.StringConstant
 import com.project.framework.mvp.utils.sessions.SessionManager
 import org.json.JSONArray
+import java.text.DecimalFormat
 
 abstract /*
 
@@ -24,7 +24,7 @@ class BaseFragment : androidx.fragment.app.Fragment(), IBaseView {
 
     lateinit var sessionManager: SessionManager
     private var mProgressDialog: Dialog? = null
-    var jsonAkses:JSONArray ?= null
+    val numberFormatter = DecimalFormat("#,###")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(setLayout(), container, false)
     }
@@ -33,8 +33,6 @@ class BaseFragment : androidx.fragment.app.Fragment(), IBaseView {
         super.onActivityCreated(savedInstanceState)
         try {
             sessionManager = SessionManager(context!!)
-            val jsonString = sessionManager.GetString(StringConstant.LOGIN_SESSION_ACCESS)
-            jsonAkses = JSONArray(jsonString)
             initCreateView()
         } catch (e: Exception) {
             e.printStackTrace()

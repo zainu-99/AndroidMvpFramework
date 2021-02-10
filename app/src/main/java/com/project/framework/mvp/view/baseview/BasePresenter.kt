@@ -4,9 +4,12 @@ import com.androidnetworking.AndroidNetworking
 import com.google.gson.Gson
 import com.project.framework.mvp.MvpApplication
 import com.project.framework.mvp.data.DataManager
+import com.project.framework.mvp.utils.UtilToast
 import com.project.framework.mvp.utils.reactive.SchedulerProvider
 import com.project.framework.mvp.utils.sessions.SessionManager
 import io.reactivex.disposables.CompositeDisposable
+import java.io.IOException
+import java.lang.Exception
 import javax.inject.Inject
 
 open /*
@@ -53,5 +56,23 @@ class BasePresenter<bv : IBaseView> @Inject constructor(
 
     fun resetBodyPostMap() {
         postMap = HashMap()
+    }
+
+    fun msgToast(message: String): UtilToast {
+        return UtilToast(dataManager.getContext(), message)
+    }
+
+    fun OnSuccessResponse(obj: IOnSuccessResponse) {
+        try {
+            obj.doThis()
+        } catch (e: Exception) {
+            obj.getError(e)
+        }
+    }
+
+    interface IOnSuccessResponse {
+        @Throws(IOException::class)
+        fun doThis()
+        fun getError(exception: Exception)
     }
 }

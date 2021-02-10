@@ -1,7 +1,9 @@
 package com.project.framework.mvp.data
 
 import android.content.Context
+import androidx.room.Room
 import com.project.framework.mvp.data.local.IRoomManager
+import com.project.framework.mvp.data.local.RoomManager
 import com.project.framework.mvp.data.network.ApiManager
 import com.project.framework.mvp.data.network.IApiManager
 import io.reactivex.Single
@@ -18,6 +20,10 @@ Jay Application
 class DataManager @Inject constructor(private val apiManager: ApiManager, private val context: Context) :
     IApiManager,
     IRoomManager, IDataManager {
+
+    fun getContext():Context{
+        return context
+    }
 
     override fun getData(api: String): Single<JSONObject> {
         return apiManager.getData(api)
@@ -45,6 +51,14 @@ class DataManager @Inject constructor(private val apiManager: ApiManager, privat
     override fun checkVersion(api: String): Single<JSONObject> {
         return apiManager.checkVersion(api)
     }
+
+    override fun RoomDatabase(): RoomManager {
+        return Room.databaseBuilder(
+            context,
+            RoomManager::class.java, "jay-framework"
+        ).build()
+    }
+
 
 
 

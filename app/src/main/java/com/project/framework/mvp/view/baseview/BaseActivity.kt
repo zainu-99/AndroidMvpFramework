@@ -17,6 +17,7 @@ import com.project.framework.mvp.utils.UtilToast
 import com.project.framework.mvp.utils.constant.StringConstant
 import com.project.framework.mvp.utils.sessions.SessionManager
 import org.json.JSONArray
+import java.text.DecimalFormat
 import java.util.*
 
 @Suppress("DEPRECATION")
@@ -28,9 +29,8 @@ Jay Application
 class BaseActivity : AppCompatActivity(), IBaseView {
     private lateinit var mViewComponent: IViewComponent
     private var mProgressDialog: Dialog? = null
-
     lateinit var sessionManager: SessionManager
-    var jsonAkses: JSONArray?= null
+    val numberFormatter = DecimalFormat("#,###")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,13 +39,8 @@ class BaseActivity : AppCompatActivity(), IBaseView {
         ).build()
         setContentView(setLayout())
         sessionManager = SessionManager(applicationContext)
-        val jsonString = sessionManager.GetString(StringConstant.LOGIN_SESSION_ACCESS)
-        if(jsonString!="") {
-            jsonAkses = JSONArray(jsonString)
-        }
         initCreateView()
     }
-
 
     override fun onDestroy() {
         super.onDestroy()
@@ -99,26 +94,20 @@ class BaseActivity : AppCompatActivity(), IBaseView {
 
     fun setViewFragment(id: Int, fragment: Fragment, ActionBarTitle: String) {
         val fragmentManager = supportFragmentManager
-        fragmentManager.beginTransaction()
-            .replace(id, fragment)
-            .commit()
-        supportActionBar?.title=ActionBarTitle
+        if (!fragmentManager.fragments.contains(fragment)) {
+            fragmentManager.beginTransaction()
+                .add(id, fragment)
+                .commit()
+        }else{
+            for(i in fragmentManager.fragments) {
+                if(fragment!=i) fragmentManager.beginTransaction().hide(i).commit()
+                else fragmentManager.beginTransaction().show(fragment).commit()
+            }
+        }
+        supportActionBar?.title = ActionBarTitle
     }
 
     override fun appContext(): Context {
         return this.applicationContext
-    }
-
-    fun setLocale(lang: String) {
-        val configuration = resources.configuration
-        configuration.setLocale(Locale(lang))
-        baseContext.resources.updateConfiguration(
-            configuration,
-            baseContext.resources.displayMetrics
-        )
-        if (lang != sessionManager.GetString("language")) {
-            sessionManager.SetString("language", lang)
-            msgToast(resources.getString(R.string.language_has_been_changed)).Success()
-        }
     }
 }
